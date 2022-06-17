@@ -1,0 +1,17 @@
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/*HEADER*/
+
+header {
+  font-size: 2em;
+  text-align: center;
+  padding: 2%;
+  background-color: rgb(58, 55, 55);
+  color: white;
+}
+
+/*HEADER*/
