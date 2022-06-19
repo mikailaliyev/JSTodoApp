@@ -14,7 +14,6 @@ addBtn.addEventListener("click", (event) => {
 });
 
 checkBox.addEventListener("click", () => {
-  console.log(checkBox.checked);
   if (checkBox.checked) {
     testText.style.textDecoration = "line-through";
   } else {
