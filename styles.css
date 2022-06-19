@@ -3,6 +3,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 /*HEADER*/
@@ -24,6 +25,8 @@ main {
   justify-content: center;
   flex-direction: column;
 }
+
+/*INPUT AREA*/
 #inputArea {
   display: flex;
   justify-content: center;
@@ -32,14 +35,77 @@ main {
   outline: none;
   font-size: 2em;
   width: 60%;
+  border-color: #0b2239;
+  border-radius: 5px;
 }
 
-#inputArea > button {
+#addBtn {
   margin-left: 0.5%;
   font-size: 2em;
-  color: #20bf55;
+  color: #0b2239;
   background-color: white;
   border-radius: 5px;
-  border-color: gray;
+  border-color: #0b2239;
+  outline: none;
 }
+#addBtn:hover {
+  box-shadow: 2px 2px 2px#0b2239;
+}
+#addBtn:active {
+  background-color: #0b2239;
+  color: white;
+}
+
+#todos {
+  margin-top: 2%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#deleteBtn {
+  font-size: 2em;
+  color: #0b2239;
+  background-color: white;
+  border-radius: 5px;
+  border-color: #0b2239;
+  outline: none;
+}
+
+#deleteBtn:hover {
+  box-shadow: 2px 2px 2px#0b2239;
+}
+
+#deleteBtn:active {
+  background-color: #0b2239;
+  color: white;
+}
+
+#test {
+  width: 60%;
+  border: 1px solid #0b2239;
+  padding: 0.5%;
+  font-size: 1.5em;
+  border-radius: 5px;
+  display: inline;
+}
+
+#todos > #checkbox {
+  width: 2.6rem;
+  height: 2.6rem;
+}
+
+#todos > #checkbox:checked {
+  accent-color: #0b2239;
+  color: white;
+}
+
+#deleteBth {
+  width: auto;
+  height: fit-content;
+  font-size: 2em;
+  display: inline;
+}
+
 /*MAIN*/
