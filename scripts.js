@@ -25,6 +25,7 @@ addBtn.addEventListener("click", (event) => {
     todosArea.appendChild(paragraph);
     todosArea.appendChild(checkBox);
     todosArea.appendChild(deleteBtn);
+    inputText.value = ""
   }
 });
 
