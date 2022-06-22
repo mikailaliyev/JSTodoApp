@@ -8,9 +8,7 @@ const testText = document.getElementById("test");
 // const deleteBtn = document.getElementById("deleteBtn");
 const pars = document.querySelectorAll("p");
 
-addBtn.addEventListener("click", (event) => {
-  event.preventDefault(); // preventinf from sending form's data
-
+const creatingElements = (event) => {
   //Creating element for each todo
   const paragraph = document.createElement("p");
   const checkBox = document.createElement("input");
@@ -19,16 +17,25 @@ addBtn.addEventListener("click", (event) => {
   //Setting attribute and text
   checkBox.type = "checkbox";
   deleteBtn.innerText = "delete";
+  paragraph.innerText = inputText.value;
+  todosArea.appendChild(paragraph);
+  todosArea.appendChild(checkBox);
+  todosArea.appendChild(deleteBtn);
+  inputText.value = "";
+};
 
-  if (inputText.value) {
-    paragraph.innerText = inputText.value;
-    todosArea.appendChild(paragraph);
-    todosArea.appendChild(checkBox);
-    todosArea.appendChild(deleteBtn);
-    inputText.value = ""
+inputText.addEventListener("keydown", (event) => {
+  // event.preventDefault(); // preventinf from sending form's data
+  if (event.key === "Enter" && inputText.value) {
+    creatingElements();
   }
 });
 
+addBtn.addEventListener("click", (event) => {
+  // event.preventDefault(); // preventinf from sending form's data
+  if (inputText.value) {
+    creatingElements();
+  }
+});
 
-
-window.onload = () => inputText.value = "";
+window.onload = () => (inputText.value = "");
