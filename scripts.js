@@ -1,8 +1,10 @@
 const inputText = document.getElementById("inputText");
 const todosArea = document.getElementById("todos");
 const addBtn = document.getElementById("addBtn");
+
 // const checkBox = document.getElementById("checkbox");
 const testText = document.getElementById("test");
+
 // const deleteBtn = document.getElementById("deleteBtn");
 const pars = document.querySelectorAll("p");
 
@@ -17,7 +19,7 @@ addBtn.addEventListener("click", (event) => {
   //Setting attribute and text
   checkBox.type = "checkbox";
   deleteBtn.innerText = "delete";
-  
+
   if (inputText.value) {
     paragraph.innerText = inputText.value;
     todosArea.appendChild(paragraph);
@@ -26,16 +28,6 @@ addBtn.addEventListener("click", (event) => {
   }
 });
 
-checkBox.addEventListener("click", () => {
-  if (checkBox.checked) {
-    testText.style.textDecoration = "line-through";
-  } else {
-    testText.style.textDecoration = "none";
-  }
-});
 
-deleteBtn.addEventListener("click", (e) => {
-  for (let i = 0; i < pars.length; i++) {
-    pars[i].remove();
-  }
-});
+
+window.onload = () => inputText.value = "";
