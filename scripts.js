@@ -2,6 +2,9 @@ const inputText = document.getElementById("inputText");
 const todosArea = document.getElementById("todos");
 const addBtn = document.getElementById("addBtn");
 
+// adding flex box to new todos
+todosArea.style.display = "flex";
+todosArea.style.flexDirection = "column";
 // const checkBox = document.getElementById("checkbox");
 const testText = document.getElementById("test");
 
@@ -13,15 +16,21 @@ const creatingElements = (event) => {
   const paragraph = document.createElement("p");
   const checkBox = document.createElement("input");
   const deleteBtn = document.createElement("button");
+  const div = document.createElement("div");
 
   //Setting attribute and text
   checkBox.type = "checkbox";
   deleteBtn.innerText = "delete";
   paragraph.innerText = inputText.value;
-  todosArea.appendChild(paragraph);
-  todosArea.appendChild(checkBox);
-  todosArea.appendChild(deleteBtn);
+  div.appendChild(paragraph);
+  div.appendChild(checkBox);
+  div.appendChild(deleteBtn);
+  todosArea.append(div);
   inputText.value = "";
+
+  deleteBtn.addEventListener("click", () => {
+    div.remove();
+  });
 };
 
 inputText.addEventListener("keydown", (event) => {
