@@ -25,14 +25,12 @@ const creatingElements = (event) => {
 };
 
 inputText.addEventListener("keydown", (event) => {
-  // event.preventDefault(); // preventinf from sending form's data
   if (event.key === "Enter" && inputText.value) {
     creatingElements();
   }
 });
 
 addBtn.addEventListener("click", (event) => {
-  // event.preventDefault(); // preventinf from sending form's data
   if (inputText.value) {
     creatingElements();
   }
