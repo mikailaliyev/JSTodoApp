@@ -5,6 +5,7 @@ const addBtn = document.getElementById("addBtn");
 // adding flex box to new todos
 todosArea.style.display = "flex";
 todosArea.style.flexDirection = "column";
+
 // const checkBox = document.getElementById("checkbox");
 const testText = document.getElementById("test");
 
@@ -25,6 +26,8 @@ const creatingElements = (event) => {
   div.appendChild(paragraph);
   div.appendChild(checkBox);
   div.appendChild(deleteBtn);
+  div.style.display = "flex";
+  div.style.fontSize = "2em";
   todosArea.append(div);
   inputText.value = "";
 
