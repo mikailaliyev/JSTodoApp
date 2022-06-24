@@ -14,7 +14,7 @@ const pars = document.querySelectorAll("p");
 
 const creatingElements = (event) => {
   //Creating element for each todo
-  const paragraph = document.createElement("p");
+  const paragraph = document.createElement("textarea");
   const checkBox = document.createElement("input");
   const deleteBtn = document.createElement("button");
   const div = document.createElement("div");
@@ -24,9 +24,10 @@ const creatingElements = (event) => {
   deleteBtn.innerText = "delete";
   paragraph.innerText = inputText.value;
   div.style.display = "flex";
-  div.setAttribute("id", "todos");
-  deleteBtn.setAttribute("id", "deleteBtn");
+  div.setAttribute("class", "todo");
+  paragraph.setAttribute("class", "paragraph");
   checkBox.setAttribute("id", "checkBox");
+  deleteBtn.setAttribute("id", "deleteBtn");
   div.appendChild(paragraph);
   div.appendChild(checkBox);
   div.appendChild(deleteBtn);

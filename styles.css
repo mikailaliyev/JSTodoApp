@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 /*HEADER*/
@@ -57,12 +57,30 @@ main {
 }
 
 #todos {
+  box-sizing: border-box;
   margin-top: 2%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   font-size: 2em;
+}
+
+.todo {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+}
+
+.paragraph {
+  width: 300px;
+  height: 100px;
+  resize: none;
+  font-size: 0.8em;
+  outline: none;
 }
 
 #deleteBtn {
@@ -83,12 +101,12 @@ main {
   color: white;
 }
 
-#todos > #checkBox {
+.todo > #checkBox {
   width: 2.6rem;
   height: 2.6rem;
 }
 
-#todos > #checkBox:checked {
+.todo > #checkBox:checked {
   accent-color: #0b2239;
   color: white;
 }
