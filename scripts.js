@@ -23,16 +23,25 @@ const creatingElements = (event) => {
   checkBox.type = "checkbox";
   deleteBtn.innerText = "delete";
   paragraph.innerText = inputText.value;
+  div.style.display = "flex";
+  div.setAttribute("id", "todos");
+  deleteBtn.setAttribute("id", "deleteBtn");
+  checkBox.setAttribute("id", "checkBox");
   div.appendChild(paragraph);
   div.appendChild(checkBox);
   div.appendChild(deleteBtn);
-  div.style.display = "flex";
-  div.style.fontSize = "2em";
+
   todosArea.append(div);
   inputText.value = "";
 
   deleteBtn.addEventListener("click", () => {
     div.remove();
+  });
+
+  checkBox.addEventListener("click", () => {
+    checkBox.checked
+      ? (paragraph.style.textDecoration = "line-through")
+      : (paragraph.style.textDecoration = "none");
   });
 };
 

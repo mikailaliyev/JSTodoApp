@@ -62,10 +62,11 @@ main {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  font-size: 2em;
 }
 
 #deleteBtn {
-  font-size: 2em;
+  font-size: 2rem;
   color: #0b2239;
   background-color: white;
   border-radius: 5px;
@@ -82,21 +83,12 @@ main {
   color: white;
 }
 
-#test {
-  width: 60%;
-  border: 1px solid #0b2239;
-  padding: 0.5%;
-  font-size: 1.5em;
-  border-radius: 5px;
-  display: inline;
-}
-
-#todos > #checkbox {
+#todos > #checkBox {
   width: 2.6rem;
   height: 2.6rem;
 }
 
-#todos > #checkbox:checked {
+#todos > #checkBox:checked {
   accent-color: #0b2239;
   color: white;
 }
