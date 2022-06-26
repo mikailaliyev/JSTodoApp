@@ -71,12 +71,12 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   font-size: 2em;
 }
 
 .paragraph {
-  width: 300px;
+  width: 350px;
   height: 100px;
   resize: none;
   font-size: 0.8em;
@@ -102,8 +102,10 @@ main {
 }
 
 .todo > #checkBox {
+  margin-top: 0;
   width: 2.6rem;
   height: 2.6rem;
+  border-color: #0b2239;
 }
 
 .todo > #checkBox:checked {
