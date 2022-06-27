@@ -40,9 +40,13 @@ const creatingElements = (event) => {
   });
 
   checkBox.addEventListener("click", () => {
-    checkBox.checked
-      ? (paragraph.style.textDecoration = "line-through")
-      : (paragraph.style.textDecoration = "none");
+    if (checkBox.checked) {
+      paragraph.style.textDecoration = "line-through";
+      paragraph.style.color = "red";
+    } else {
+      paragraph.style.textDecoration = "none";
+      paragraph.style.color = "green";
+    }
   });
 };
 

@@ -81,6 +81,7 @@ main {
   resize: none;
   font-size: 0.8em;
   outline: none;
+  color: green;
 }
 
 #deleteBtn {
