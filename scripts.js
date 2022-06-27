@@ -36,7 +36,7 @@ const creatingElements = (event) => {
   inputText.value = "";
 
   deleteBtn.addEventListener("click", () => {
-    div.remove();
+    if (confirm("Are you sure you want to delete this todo?")) div.remove();
   });
 
   checkBox.addEventListener("click", () => {
